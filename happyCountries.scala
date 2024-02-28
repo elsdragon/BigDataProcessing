@@ -73,7 +73,7 @@ val maxScoreByRegion = dfHappy21.groupBy("Regional indicator").agg(
   max("Ladder score").as("Max_ranking"),
   first("Country name").as ("Pais"))
 
-maxScoreByRegion.show()
+maxScoreByRegion.show(false)
 
 
 // COMMAND ----------
@@ -170,7 +170,6 @@ dfHappy2020Clean.count()
 // COMMAND ----------
 
 // Eliminamos posibles nulos en datos 2021
-dfHappy21.count()
 val dfHappy2021Clean = dfHappy21.na.drop("any", Seq("Logged GDP per capita"))
 dfHappy2021Clean.count()
 
@@ -213,7 +212,7 @@ maxHealthyLife.show()
 val countryMaxHealthy = maxHealthyLife.first().getAs[String]("Country name")
 
 // Filtramos el DF dfHappy2019 por el nombre anterior y seleccionamos las columnas de nombre de país y Healthy life.
-
+val dfHappy2019 = dfHappyYears.filter(col("Year") === 2019)
 val valueCountry2019 = dfHappy2019.filter(col("Country name")=== countryMaxHealthy)
   .select("Country name", "Healthy life expectancy at birth").show
   
