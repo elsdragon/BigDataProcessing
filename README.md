@@ -16,5 +16,13 @@ o disminuyó?
 en ese indicador en el 2019?
 
 ### ARCHIVO happyCountries.scala 
-Resolución de los puntos anteriores con un notebook en Spark desde el entorno Databricks
+Resolución de los puntos anteriores con un notebook en Spark Scala desde el entorno Databricks
+
+### ARCHIVO happyCountries.scala 
+Resolucion de los puntos anteriores con un notebook con PySpark en el entorno de Jupyter Notebook.
+
+### Enlace al artículo publicado en Medium
+Artículo que trata sobre los desfíos con estos dos lenguajes para un Junior.
+
+https://medium.com/@elsdragonmovil/desaf%C3%ADos-del-an%C3%A1lisis-de-datos-con-spark-scala-y-pyspark-la-aventura-de-un-junior-10501f0ca9da
 
